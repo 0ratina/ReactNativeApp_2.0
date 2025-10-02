@@ -1,5 +1,9 @@
 {
   "expo": {
+     "expo-calendar":
+     {
+      "calendarPermission": "The app needs to access your calendar."
+     },
     "name": "navigationapplication",
     "slug": "navigationapplication",
     "version": "1.0.0",
@@ -34,3 +38,5 @@
     ]
   }
 }
+
+

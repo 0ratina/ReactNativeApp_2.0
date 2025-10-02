@@ -9,9 +9,9 @@ import { Image } from 'react-native';
 import bell from '../assets/bell.png';
 import newspaper from '../assets/newspaper.png';
 import { Home } from './screens/Home';
-import { Profile } from './screens/Profile';
+import { Pizza } from './screens/Pizza';
 import { Settings } from './screens/Settings';
-import { Updates } from './screens/Updates';
+import { CalendarComponent } from './screens/Calendar';
 import { NotFound } from './screens/NotFound';
 
 const HomeTabs = createBottomTabNavigator({
@@ -32,8 +32,8 @@ const HomeTabs = createBottomTabNavigator({
         ),
       },
     },
-    Updates: {
-      screen: Updates,
+    Calendar: {
+      screen: CalendarComponent,
       options: {
         tabBarIcon: ({ color, size }) => (
           <Image
@@ -59,8 +59,8 @@ const RootStack = createNativeStackNavigator({
         headerShown: false,
       },
     },
-    Profile: {
-      screen: Profile,
+    Pizza: {
+      screen: Pizza,
       linking: {
         path: ':user(@[a-zA-Z0-9-_]+)',
         parse: {
