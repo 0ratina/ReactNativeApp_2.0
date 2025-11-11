@@ -7,6 +7,7 @@ React Native: Image, View, Text, Stylesheet, TextInput, ScrollView, Button.
 Expo: useBatteryLevel, useBatteryState, useLowPowerMode, registerRootComponent, Asset, createURL, SplashScreen, Calendar.
 
 
+
 1. Projektet använder minst 4 stycken RN-komponenter och minst 4 stycken Expo komponenter[X]
 
 2. De utvalda komponenterna MÅSTE antecknas i README filen tillsammans med en lista över genomförda krav.[X]

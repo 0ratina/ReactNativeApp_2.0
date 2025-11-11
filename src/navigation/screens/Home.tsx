@@ -19,8 +19,8 @@ export function Home() {
           style={{width: 200, height: 200}}
         />
       <Text>Home Screen</Text>
-      <Button screen="Pizza" params={{ user: 'jane' }}>
-        Go to PizzaPlace
+      <Button screen="Pizza">
+        Go to Book Collection
       </Button>
       <Button screen="Settings">Go to Settings</Button>
       <View style={batterystyling.container}>

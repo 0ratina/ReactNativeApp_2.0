@@ -6,6 +6,10 @@ import * as SplashScreen from 'expo-splash-screen';
 import * as React from 'react';
 import { useColorScheme } from 'react-native';
 import { Navigation } from './navigation';
+import {useEffect} from "react";
+import { StaticScreenProps, useNavigation } from '@react-navigation/native';
+import {Button, View} from "react-native";
+import {Pizza} from "./navigation/screens/Pizza";
 
 Asset.loadAsync([
   ...NavigationAssets,
@@ -35,3 +39,6 @@ export function App() {
     />
   );
 }
+
+
+

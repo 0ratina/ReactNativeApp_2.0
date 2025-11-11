@@ -1,26 +1,6 @@
 import { useEffect } from 'react';
-import { StyleSheet, View, Text, Button, Platform } from 'react-native';
+import { StyleSheet, View, Text, Button, Platform, Alert } from 'react-native';
 import * as Calendar from 'expo-calendar';
-
-
-// export function Updates() {
-//   return (
-//     <View style={styles.container}>
-//       <Text>Updates Screen</Text>
-//     </View>
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     gap: 10,
-//   },
-// });
-
-
 
 export function CalendarComponent() {
   useEffect(() => {
@@ -28,14 +8,15 @@ export function CalendarComponent() {
       const { status } = await Calendar.requestCalendarPermissionsAsync();
       if (status === 'granted') {
         const calendars = await Calendar.getCalendarsAsync(Calendar.EntityTypes.EVENT);
-        console.log('Here are all your calendars:');
-        console.log({ calendars });
+        console.log('Here are all your calendars:', calendars);
+      } else {
+        Alert.alert('Permission required', 'Calendar permission was not granted.');
       }
     })();
   }, []);
 
   return (
-    <View style={calendarstyle.container}>
+    <View style={styles.container}>
       <Text>Calendar Module Example</Text>
       <Button title="Create a new calendar" onPress={createCalendar} />
     </View>
@@ -48,10 +29,14 @@ async function getDefaultCalendarSource() {
 }
 
 async function createCalendar() {
-  const defaultCalendarSource =
-    Platform.OS === 'ios'
-      ? await getDefaultCalendarSource()
-      : { isLocalAccount: true, name: 'Expo Calendar' };
+  let defaultCalendarSource;
+
+  if (Platform.OS === 'ios') {
+    defaultCalendarSource = await getDefaultCalendarSource();
+  } else {
+    defaultCalendarSource = { isLocalAccount: true, name: 'Expo Calendar' };
+  }
+
   const newCalendarID = await Calendar.createCalendarAsync({
     title: 'Expo Calendar',
     color: 'blue',
@@ -62,10 +47,11 @@ async function createCalendar() {
     ownerAccount: 'personal',
     accessLevel: Calendar.CalendarAccessLevel.OWNER,
   });
+
   console.log(`Your new calendar ID is: ${newCalendarID}`);
 }
 
-const calendarstyle = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
@@ -73,4 +59,5 @@ const calendarstyle = StyleSheet.create({
     justifyContent: 'space-around',
   },
 });
+
 
