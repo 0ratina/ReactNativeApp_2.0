@@ -9,7 +9,7 @@ import { Navigation } from './navigation';
 import {useEffect} from "react";
 import { StaticScreenProps, useNavigation } from '@react-navigation/native';
 import {Button, View} from "react-native";
-import {Pizza} from "./navigation/screens/Pizza";
+import BookCollection from "./navigation/screens/BookCollection";
 
 Asset.loadAsync([
   ...NavigationAssets,

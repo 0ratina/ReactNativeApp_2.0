@@ -12,17 +12,16 @@ export function Home() {
   return (
     <View style={styles.container}>
       <Text>WELCOME!</Text>
+      <Text>Create Your Own Book Collection!</Text>
       <Image
           source={{
             uri: 'https://reactnative.dev/docs/assets/p_cat2.png',
           }}
           style={{width: 200, height: 200}}
         />
-      <Text>Home Screen</Text>
-      <Button screen="Pizza">
+      <Button screen="BookCollection">
         Go to Book Collection
       </Button>
-      <Button screen="Settings">Go to Settings</Button>
       <View style={batterystyling.container}>
         <Text>This is the battery's state</Text>
         <Text>{batteryState}</Text>
@@ -37,7 +36,7 @@ export function Home() {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop:50,
+    paddingTop:70,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',

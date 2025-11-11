@@ -12,7 +12,7 @@ type Book = {
   coverUri: string;
 };
 
-export function Pizza() {
+export function Books() {
   const [books, setBooks] = useState<Book[]>([]);
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
@@ -67,7 +67,7 @@ export function Pizza() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>📚 My Book Collection</Text>
+      <Text style={styles.header}>📚 Create Your Own Book Collection</Text>
 
       <TextInput
         style={styles.input}
@@ -108,7 +108,7 @@ export function Pizza() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 20, backgroundColor: '#fff' },
-  header: { fontSize: 22, fontWeight: 'bold', marginBottom: 20 },
+  header: { fontSize: 20, fontWeight: 'bold', marginBottom: 20 },
   input: {
     borderWidth: 1,
     borderColor: '#ccc',
@@ -121,10 +121,14 @@ const styles = StyleSheet.create({
   bookImage: { width: 50, height: 70, marginRight: 10, borderRadius: 5 },
   bookTitle: { fontWeight: 'bold' },
   deleteButton: {
+    marginLeft:100,
     backgroundColor: 'red',
     paddingHorizontal: 10,
     paddingVertical: 5,
     borderRadius: 6,
+  },
+  pickcoverimagebutton:{
+    margin:100,
   },
 });
 
@@ -375,5 +379,5 @@ const styles = StyleSheet.create({
 //   },
 // });
 
-export default Pizza;
+export default Books;
 

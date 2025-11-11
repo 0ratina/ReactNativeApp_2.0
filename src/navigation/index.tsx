@@ -9,8 +9,7 @@ import { Image } from 'react-native';
 import bell from '../assets/bell.png';
 import newspaper from '../assets/newspaper.png';
 import { Home } from './screens/Home';
-import { Pizza } from './screens/Pizza';
-import { Settings } from './screens/Settings';
+import  BookCollection from './screens/BookCollection';
 import { CalendarComponent } from './screens/Calendar';
 import { NotFound } from './screens/NotFound';
 
@@ -59,8 +58,8 @@ const RootStack = createNativeStackNavigator({
         headerShown: false,
       },
     },
-    Pizza: {
-      screen: Pizza,
+    BookCollection: {
+      screen: BookCollection,
       linking: {
         path: ':user(@[a-zA-Z0-9-_]+)',
         parse: {
@@ -70,17 +69,6 @@ const RootStack = createNativeStackNavigator({
           user: (value) => `@${value}`,
         },
       },
-    },
-    Settings: {
-      screen: Settings,
-      options: ({ navigation }) => ({
-        presentation: 'modal',
-        headerRight: () => (
-          <HeaderButton onPress={navigation.goBack}>
-            <Text>Close</Text>
-          </HeaderButton>
-        ),
-      }),
     },
     NotFound: {
       screen: NotFound,
