@@ -2,9 +2,10 @@ React Native App
 
 En applikation som är uppbyggd med hjälp av React Native och Expo komponenter.
 
-React Native: Image, View, Text, Stylesheet, TextInput, ScrollView, Button.
+React Native: Image, View, Text, Stylesheet, TextInput, Button, AsyncStorage, FlatList, TouchableOpacity.
 
-Expo: useBatteryLevel, useBatteryState, useLowPowerMode, registerRootComponent, Asset, createURL, SplashScreen, Calendar.
+Expo: useBatteryLevel, useBatteryState, useLowPowerMode, registerRootComponent, Asset, createURL, SplashScreen,
+ImagePicker, Calendar.
 
 
 
@@ -18,9 +19,9 @@ Expo: useBatteryLevel, useBatteryState, useLowPowerMode, registerRootComponent, 
 
 5. Projektmappen innehåller en README.md fil - (läs ovan för mer info)[X]
 
-6. Uppgiften lämnas in i tid![]
+6. Uppgiften lämnas in i tid![X]
 
-7. Muntlig presentation är genomförd[]
+7. Muntlig presentation är genomförd[X]
 
 
 

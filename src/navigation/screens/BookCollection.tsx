@@ -1,6 +1,6 @@
 import { Text } from '@react-navigation/elements';
 import { StaticScreenProps } from '@react-navigation/native';
-import { StyleSheet, View, ScrollView, Image, TextInput, Button, FlatList, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Image, TextInput, Button, FlatList, TouchableOpacity } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as ImagePicker from 'expo-image-picker';

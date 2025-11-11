@@ -10,7 +10,6 @@ import bell from '../assets/bell.png';
 import newspaper from '../assets/newspaper.png';
 import { Home } from './screens/Home';
 import  BookCollection from './screens/BookCollection';
-import { CalendarComponent } from './screens/Calendar';
 import { NotFound } from './screens/NotFound';
 
 const HomeTabs = createBottomTabNavigator({
@@ -22,21 +21,6 @@ const HomeTabs = createBottomTabNavigator({
         tabBarIcon: ({ color, size }) => (
           <Image
             source={newspaper}
-            tintColor={color}
-            style={{
-              width: size,
-              height: size,
-            }}
-          />
-        ),
-      },
-    },
-    Calendar: {
-      screen: CalendarComponent,
-      options: {
-        tabBarIcon: ({ color, size }) => (
-          <Image
-            source={bell}
             tintColor={color}
             style={{
               width: size,
