@@ -117,9 +117,6 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     borderRadius: 8,
   },
-  buttoncontainer:{
-  padding:50,
-  },
   image: { width: 120, height: 160, marginVertical: 10, borderRadius: 8 },
   bookItem: { flexDirection: 'row', alignItems: 'center', marginBottom: 10 },
   bookImage: { width: 50, height: 70, marginRight: 10, borderRadius: 5 },
