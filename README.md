@@ -1,6 +1,6 @@
-React Native App
+BookCreator
 
-En applikation som är uppbyggd med hjälp av React Native och Expo komponenter.
+En applikation som är uppbyggd med hjälp av React Native och Expo komponenter där du kan skapa dina egna böcker.
 
 React Native: Image, View, Text, Stylesheet, TextInput, Button, AsyncStorage, FlatList, TouchableOpacity.
 
