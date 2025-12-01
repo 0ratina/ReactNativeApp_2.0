@@ -3,7 +3,7 @@ import { StyleSheet, View, Image } from 'react-native';
 import { useBatteryLevel, useBatteryState, useLowPowerMode } from 'expo-battery';
 
 
-export function Home() {
+export default function Home() {
   const batteryLevel = useBatteryLevel();
   const batteryState = useBatteryState();
   const lowPowerMode = useLowPowerMode();

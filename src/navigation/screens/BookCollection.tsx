@@ -1,5 +1,5 @@
 import { Text } from '@react-navigation/elements';
-import { StaticScreenProps } from '@react-navigation/native';
+import { StaticScreenProps, Link } from '@react-navigation/native';
 import { StyleSheet, View, Image, TextInput, Button, FlatList, TouchableOpacity } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -68,6 +68,7 @@ export function Books() {
   return (
     <View style={styles.container}>
       <Text style={styles.header}>📚 Create Your Own Book Collection</Text>
+      {/* <Link screen="HomeTabs">Go to Home</Link> */}
 
       <TextInput
         style={styles.input}

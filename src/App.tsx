@@ -5,40 +5,37 @@ import { createURL } from 'expo-linking';
 import * as SplashScreen from 'expo-splash-screen';
 import * as React from 'react';
 import { useColorScheme } from 'react-native';
-import { Navigation } from './navigation';
-import {useEffect} from "react";
-import { StaticScreenProps, useNavigation } from '@react-navigation/native';
-import {Button, View} from "react-native";
-import BookCollection from "./navigation/screens/BookCollection";
 
-Asset.loadAsync([
-  ...NavigationAssets,
-  require('./assets/newspaper.png'),
-  require('./assets/bell.png'),
-]);
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {
+  createStaticNavigation,
+  NavigationContainer,
+  StaticParamList,
+} from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Image } from 'react-native';
+import newspaper from '../assets/newspaper.png';
+// import Home from './screens/Home';
+import BookCollection from './navigation/screens/BookCollection'
+import NotFound from './navigation/screens/Home'
+import { View, Text } from 'react-native';
+import Home from './navigation/screens/Home'
 
-SplashScreen.preventAutoHideAsync();
 
-const prefix = createURL('/');
+const Stack = createNativeStackNavigator();
 
-export function App() {
-  const colorScheme = useColorScheme();
-
-  const theme = colorScheme === 'dark' ? DarkTheme : DefaultTheme
-
-  return (
-    <Navigation
-      theme={theme}
-      linking={{
-        enabled: 'auto',
-        prefixes: [prefix],
-      }}
-      onReady={() => {
-        SplashScreen.hideAsync();
-      }}
-    />
-  );
+export function App(){
+  return(
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='Home'>
+        <Stack.Screen name="Home" component = {Home}/>
+        <Stack.Screen name="BookCollection" component = {BookCollection}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  )
 }
+
+export default App;
 
 
 
